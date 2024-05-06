@@ -135,7 +135,7 @@ const Leftside = () => {
               }
 
               {/* Menu */}
-              {userData?.status && getMenu.length
+              {userData?.status && getMenu?.length
                 ? getMenu.map((value, index) => {
                     return <LoadParent key={index} value={value} />;
                   })

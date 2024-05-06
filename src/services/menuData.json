@@ -1,0 +1,16 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "License Manager",
+      "icon": "bi bi-journal-check",
+      "icon2": "bi bi-chevron-down ms-auto",
+      "data_bs_targetp": "#Dashboard-nav3",
+      "data_bs_target": "Dashboard-nav3",
+      "hrefLink": "/license-manager-list",
+      "roleInfo":["ADMIN"],
+      "title":"shift",
+      "children": []
+    }    
+  ]
+}

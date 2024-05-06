@@ -4,7 +4,28 @@ import ItemService from "../../services/supplier_appCommonService";
 
 
 const initialState = {
-    data:[],
+    data:[{
+        "_id" : "6557065be1ab9d27d75cba66",
+        "compId" : "55ce3f9a-6cc5-4114-b1ad-83d1941adb09",
+        "firstName" : "Santhosh",
+        "lastName" : "Ambekar",
+        "password" : "$2b$12$Hre1E.ELkCbMaf0XHGeAkuXCDUF7eeWOOq/89kGEjFScQID3gxl0q",
+        "email" : "santhoshcse4@gmail.com",
+        "contactNumber" : "9844176733",
+        "companyName" : "Workers Hive Pvt Ltd",
+        "mailToken" : "d708oiwwrwrHir",
+        "isMailValidated" : true,
+        "role" : "ADMIN",
+        "description" : "lipsom lipsom lipsom lipsom lipsom lipsom lipsom lipsom lipsom lipsom lipsom lipsom lipsom lipsom lipsom lipsom lipsom lipsom lipsom lipsom lipsom lipsom lipsom lipsom lipsom ",
+        "companyLogoPath" : "companyLogo/company_6557065be1ab9d27d75cba66.jpeg",
+        "oldPassword" : "$2b$12$eVEYgM5Yc66U9dvY1pRtDuy/LSoFm8RcSlVywSYWt6wUVIlWPcSvO",
+        "profileImgPath" : "profileImg/profile_6557065be1ab9d27d75cba66.jpeg",
+        "paymentStatus" : "",
+        "makePaymentStatus" : false,
+        "forgotPasswordToken" : "InvalidToVerifyPasswordadf8oiokeHwioo",
+        "modified_password_DT" : "2024-04-18 12:31:43",
+        "timezone" : "Asia/Calcutta"
+    }],
     status:true,
     config:[],
 };

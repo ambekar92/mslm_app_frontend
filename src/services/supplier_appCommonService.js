@@ -1,5 +1,7 @@
 import config from './configuration'
 import ConstantsList from '../common/Constants';
+import menuData from './menuData.json'
+import licenseData from './data.json'
 
 // this block needed to get the login Token and Login user _id 
 let localData = localStorage.getItem('userData');
@@ -12,8 +14,15 @@ if(localData){
 
 //POST - getMenuOnUserRole
 async function getMenuOnUserRole(param) { // This method calling from Redux
-    let api_url= config.BASE_URL + "api/getMenu";
-    return callGET(api_url, param);
+    // let api_url= config.BASE_URL + "api/getMenu";
+    // return callGET(api_url, param);
+    return menuData;
+}
+
+async function getLicenseData(param) { // This method calling from Redux
+    // let api_url= config.BASE_URL + "api/getMenu";
+    // return callGET(api_url, param);
+    return licenseData;
 }
 
 // get info from the configuration.js file
@@ -273,6 +282,7 @@ async function getGatepassCreate(param) { // This method calling from Redux
 }
 
 const func = {
+    getLicenseData,
     login,
     logout,
     registerUser,

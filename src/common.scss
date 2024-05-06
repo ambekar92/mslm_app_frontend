@@ -9,7 +9,7 @@
 // Common text logo Color
 .supplier_app {
   font-family: sans-serif, "Helvetica Neue", "Lucida Grande", Arial;
-  color: #c1071e !important;
+  color: #e6e915 !important;
 }
 
 .eyeCss{
@@ -51,15 +51,15 @@ body {
 
 // Common Button Color
 .btn {
-  background: linear-gradient(359deg, #507ac7de, #4f72b3, #507ac7de) !important;
+  // background: linear-gradient(359deg, #507ac7de, #4f72b3, #507ac7de) !important;
   border-radius: 8px !important;
   border-color: #4f72b3 !important;
-  color: #fff !important;
+  // color: #fff !important;
 }
 
-.btn:hover {
-  background: linear-gradient(359deg, #4f72b3, #507ac7de, #4f72b3) !important;
-}
+// .btn:hover {
+//   background: linear-gradient(359deg, #4f72b3, #507ac7de, #4f72b3) !important;
+// }
 
 .btnTable {
   // background: linear-gradient(359deg, rgb(8 45 255 / 75%), #00158382, rgb(8 45 255 / 75%)) !important;
@@ -350,6 +350,8 @@ a {
 // }
 .subText {
   font-size: 14px;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 
 .form-signin {
@@ -647,9 +649,9 @@ a {
     }
   }
 
-  .subText {
-    font-size: 13px;
-  }
+  // .subText {
+  //   font-size: 13px;
+  // }
 
   .staySingIn {
     font-size: 14px;
