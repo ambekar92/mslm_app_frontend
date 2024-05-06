@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+label {
+  float: left;
+}
+
+.p-multiselect{
+  height: 38px !important;
+}
+
+body{
+  zoom:80%;
+}
+
+.modal-backdrop{
+  width: 125vw !important;
+  height: 125vh !important;
+}
+
+.rdt_TableHeadRow{
+  font-weight: 700;
+  font-size: 13px;
+}
