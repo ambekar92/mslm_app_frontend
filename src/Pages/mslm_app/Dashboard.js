@@ -4,8 +4,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 // import { ComboboxField } from '../../../Components/formElements/ComboboxField';
 import Layout from "../../Layout/Layout";
-// import ItemService from "../../services/supplier_appCommonService";
-import menuData from "../../services/data.json";
+import ItemService from "../../services/supplier_appCommonService";
 import { useNavigate } from 'react-router-dom';
 
 const Dashboard = () => {
@@ -23,16 +22,23 @@ const Dashboard = () => {
   }, []);
 
   const getLicenseData = async () => {
+    ItemService.getLicenseData().then((items) => {
       // Sort the data alphabetically based on a specific key (e.g., name)
-      const sortedData = menuData?.data?.sort((a, b) =>
+      const sortedData = items?.data?.sort((a, b) =>
         a.name.localeCompare(b.name)
       );
       // Organize the sorted data into sections
       const groupedData = groupData(sortedData);
 
-      // console.log(">>groupedData ", groupedData);
+      console.log(">>groupedData ", groupedData);
       setData(groupedData);
+    });
   };
+
+  const handleSelect=(id)=>{
+    console.log(">> ID", id);
+    navigate('/detail-page');
+  }
 
   const groupData = (sortedData) => {
     const grouped = {};
@@ -46,11 +52,6 @@ const Dashboard = () => {
     });
     return grouped;
   };
-
-  const handleSelect=(id)=>{
-    console.log(">> ID", id);
-    navigate('/detail-page');
-  }
 
   return (
     <main className="dashboard main" id="main">
@@ -70,8 +71,8 @@ const Dashboard = () => {
                     <h2>{section}</h2>
                   </Col>
 
-                  {getData[section].map((item, index1) => (
-                    <Col xs={12} md={3} lg={3} className="commTopButtonRightLeftPadding" key={index1}>
+                  {getData[section].map((item, index) => (
+                    <Col xs={12} md={3} lg={3} className="commTopButtonRightLeftPadding" key={index}>
                       <button
                         type="button"
                         className="btn btn-outline-primary"
