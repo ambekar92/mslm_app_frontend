@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Outlet, Link } from "react-router-dom";
 import Loader from "../Components/Loader";
 import TimeDisplay from "../Components/TimeDisplay";
-import menuDataFile from "../services/data.json";
+import menuDataFile from "../services/menuData.json";
 
 //Redux
 import { useSelector } from "react-redux";

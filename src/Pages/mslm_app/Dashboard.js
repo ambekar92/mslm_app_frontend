@@ -30,7 +30,7 @@ const Dashboard = () => {
       // Organize the sorted data into sections
       const groupedData = groupData(sortedData);
 
-      console.log(">>groupedData ", groupedData);
+      // console.log(">>groupedData ", groupedData);
       setData(groupedData);
     });
   };
