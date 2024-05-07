@@ -3,7 +3,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 // import Layout from '../Layout/Layout';
 import { Link   } from "react-router-dom";
-import ConstantsList from '../common/Constants';
+// import ConstantsList from '../common/Constants';
 
 export class Page404 extends Component {
     render() {
@@ -17,7 +17,7 @@ export class Page404 extends Component {
                                 <h1>404</h1>
                                 <h2>The page you are looking for doesn't exist.</h2>
                                 {/* <a className="btn" href="/dashboard">Back to home</a> */}
-                                <Link to={ConstantsList.DASHBOARD} className="btn">
+                                <Link to={'/license-manager-list'} className="btn">
                                     Back to home
                                 </Link >
                                 <img src="/assets/img/not-found.svg" className="img-fluid py-5" alt="Page Not Found" />

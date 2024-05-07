@@ -4,9 +4,12 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 // import { ComboboxField } from '../../../Components/formElements/ComboboxField';
 import Layout from "../../Layout/Layout";
-import ItemService from "../../services/supplier_appCommonService";
+// import ItemService from "../../services/supplier_appCommonService";
+import menuData from "../../services/data.json";
+import { useNavigate } from 'react-router-dom';
 
 const Dashboard = () => {
+  const navigate = useNavigate();
   localStorage.setItem("menu", "License Manager");
   localStorage.setItem("submenu", "-");
 
@@ -20,17 +23,15 @@ const Dashboard = () => {
   }, []);
 
   const getLicenseData = async () => {
-    ItemService.getLicenseData().then((items) => {
       // Sort the data alphabetically based on a specific key (e.g., name)
-      const sortedData = items?.data?.sort((a, b) =>
+      const sortedData = menuData?.data?.sort((a, b) =>
         a.name.localeCompare(b.name)
       );
       // Organize the sorted data into sections
       const groupedData = groupData(sortedData);
 
-      console.log(">>groupedData ", groupedData);
+      // console.log(">>groupedData ", groupedData);
       setData(groupedData);
-    });
   };
 
   const groupData = (sortedData) => {
@@ -46,6 +47,11 @@ const Dashboard = () => {
     return grouped;
   };
 
+  const handleSelect=(id)=>{
+    console.log(">> ID", id);
+    navigate('/detail-page');
+  }
+
   return (
     <main className="dashboard main" id="main">
       <Layout />
@@ -57,20 +63,21 @@ const Dashboard = () => {
             <hr />
 
             {/* Code Start Here */}
-            {Object.keys(getData).map((section) => (
-              <div key={section}>
+            {Object.keys(getData).map((section, index) => (
+              <div key={index}>
                 <Row>
                   <Col xs={12} md={12} lg={12} className="commLeftRightPadding">
                     <h2>{section}</h2>
                   </Col>
 
-                  {getData[section].map((item) => (
-                    <Col xs={12} md={3} lg={3} className="commTopButtonRightLeftPadding">
+                  {getData[section].map((item, index1) => (
+                    <Col xs={12} md={3} lg={3} className="commTopButtonRightLeftPadding" key={index1}>
                       <button
                         type="button"
                         className="btn btn-outline-primary"
                         key={item.id}
                         style={{ width: "100%" }}
+                        onClick={()=>handleSelect(item.id)}
                       >
                         {item.name}
                       </button>
