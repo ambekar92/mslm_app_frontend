@@ -7,10 +7,10 @@ const initialState = {
     data:[{
         "_id" : "6557065be1ab9d27d75cba66",
         "compId" : "55ce3f9a-6cc5-4114-b1ad-83d1941adb09",
-        "firstName" : "Santhosh",
-        "lastName" : "Ambekar",
+        "firstName" : "Maruthi",
+        "lastName" : "S",
         "password" : "$2b$12$Hre1E.ELkCbMaf0XHGeAkuXCDUF7eeWOOq/89kGEjFScQID3gxl0q",
-        "email" : "santhoshcse4@gmail.com",
+        "email" : "maruthi@abc.com",
         "contactNumber" : "9844176733",
         "companyName" : "Workers Hive Pvt Ltd",
         "mailToken" : "d708oiwwrwrHir",
