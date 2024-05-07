@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Outlet, Link } from "react-router-dom";
 import Loader from "../Components/Loader";
 import TimeDisplay from "../Components/TimeDisplay";
+import menuDataFile from "../../services/data.json";
 
 //Redux
 import { useSelector } from "react-redux";
@@ -17,7 +18,7 @@ const Leftside = () => {
   // Get from Menu.json
   const loadMenu = () => {
     // Get Data from Store
-    setMenu(menuData?.data);
+    setMenu(menuDataFile?.data);
   };
 
   const LoadParent = ({ value }) => {
@@ -142,7 +143,7 @@ const Leftside = () => {
                 : null}
             </ul>
           </nav>
-          {/* <TimeDisplay timezone={userTimezone} /> */}
+          <TimeDisplay timezone={userTimezone} />
         </aside>
       </div>
     </>
